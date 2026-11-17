@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kiwinoah is me</title>
+<link rel="icon" href="kiwifruit_favicon_144.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f1f5df; --ink:#1f2414; --muted:#55603d; --flesh:#8cbd35; --core:#eef5c4;
+  --skin:#6e4c2c; --seed:#1c1a12; --line:#c9d6a0; --card:#e6eecb;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#16190e; --ink:#eef3d6; --muted:#a9b58a; --flesh:#9ccb3c; --core:#e6f0b0;
+    --skin:#8a6238; --seed:#0d0f08; --line:#343b1f; --card:#1f2414;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16190e; --ink:#eef3d6; --muted:#a9b58a; --flesh:#9ccb3c; --core:#e6f0b0;
+  --skin:#8a6238; --seed:#0d0f08; --line:#343b1f; --card:#1f2414;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;font-size:1.0625rem}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--flesh);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+nav .logo{font-weight:800;text-decoration:none;font-size:1.25rem}
+nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:start;padding:1.5rem 0 5rem}
+h1{font-size:clamp(3.2rem,9vw,6.5rem);line-height:1;letter-spacing:-.03em;font-weight:800;margin:0 0 1.25rem}
+.lede{font-size:1.25rem;color:var(--muted);max-width:30em;margin:0 0 2rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--flesh);border-color:var(--flesh);color:#1a2008}
+.btn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.kiwi{width:100%;max-width:420px;justify-self:end;align-self:start;aspect-ratio:1}
+.kiwi svg{width:100%;height:100%;display:block}
+#seeds{transform-origin:200px 200px;animation:spin 1.6s cubic-bezier(.2,.7,.2,1) 1}
+@keyframes spin{from{transform:rotate(-120deg)}to{transform:rotate(0)}}
+section{padding:4rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em;margin:0 0 1.5rem;line-height:1.1}
+.about{max-width:40em}
+.about p{margin:0 0 1rem;max-width:34em}
+.facts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.9rem 1.5rem;align-content:start}
+.facts dt{font-weight:600}
+.facts dd{margin:0;color:var(--muted)}
+.greet{font-size:clamp(1.4rem,3.2vw,2rem);font-weight:600;line-height:1.35;margin:0 0 2rem;letter-spacing:-.01em}
+.greet span{display:block}
+.greet .ask{color:var(--muted)}
+.contact p{max-width:32em;color:var(--muted)}
+.mail{font-size:clamp(1.4rem,4vw,2.4rem);font-weight:800;letter-spacing:-.02em}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+@media(max-width:760px){
+  .about{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr 36%;gap:1rem}
+  h1{font-size:clamp(2.4rem,11vw,3.2rem)}
+  .greet{font-size:1.25rem}
+  .kiwi{max-width:none}
+  nav ul{gap:1rem}
+}
+@media(prefers-reduced-motion:reduce){#seeds{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#top">Noah</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#facts">Facts</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <h1>Kia ora.</h1>
+      <p class="greet">
+        <span>Tēna koe,</span>
+        <span>Ko Noah ahau.</span>
+        <span class="ask">Ko wai koe?</span>
+      </p>
+      <div class="btns">
+        <a class="btn primary" href="#about">About me</a>
+        <a class="btn" href="#contact">Say hello</a>
+      </div>
+    </div>
+    <div class="kiwi" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <circle cx="200" cy="200" r="190" fill="var(--skin)"/>
+        <circle cx="200" cy="200" r="174" fill="var(--flesh)"/>
+        <circle cx="200" cy="200" r="174" fill="url(#g)"/>
+        <defs>
+          <radialGradient id="g">
+            <stop offset="0" stop-color="var(--core)" stop-opacity="1"/>
+            <stop offset=".28" stop-color="var(--core)" stop-opacity=".9"/>
+            <stop offset=".6" stop-color="var(--flesh)" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <g id="rays" stroke="var(--core)" stroke-opacity=".45" stroke-width="2"></g>
+        <g id="seeds" fill="var(--seed)"></g>
+      </svg>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about">
+      <div>
+        <p>I’m Noah, from Auckland, New Zealand. This is a little page about me as a kiwi.</p>
+        <p>I like living life, keeping up with the team. I’m always happy to have a yarn.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <section>
+    <h2 id="facts">A few facts</h2>
+    <dl class="facts">
+      <dt>Name</dt><dd>Noah</dd>
+      <dt>Home</dt><dd>Auckland, Aotearoa New Zealand</dd>
+      <dt>Languages</dt><dd>English, and learning te reo Māori</dd>
+      <dt>Likes</dt><dd>Coastal walks and kiwifruit</dd>
+      <dt>Currently</dt><dd>Figuring out what to do next</dd>
+    </dl>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Say hello</h2>
+    <p>Want to get in touch? Send me a message and I’ll get back to you.</p>
+    <a class="mail" href="mailto:me@kiwinoah.com">me@kiwinoah.com</a>
+  </section>
+
+  <footer>Noah · Made in Aotearoa New Zealand · With the help of Generative AI</footer>
+</div>
+<script>
+(function(){
+  var seeds=document.getElementById('seeds'),rays=document.getElementById('rays'),ns='http://www.w3.org/2000/svg';
+  function add(p,n,a){var e=document.createElementNS(ns,n);for(var k in a)e.setAttribute(k,a[k]);p.appendChild(e)}
+  for(var i=0;i<28;i++){
+    var d=i*360/28;
+    add(rays,'line',{x1:200,y1:200-34,x2:200,y2:200-165,transform:'rotate('+d+' 200 200)'});
+  }
+  for(var j=0;j<30;j++){
+    var deg=j*12;
+    add(seeds,'ellipse',{cx:200,cy:200-78,rx:5,ry:10,transform:'rotate('+deg+' 200 200)'});
+  }
+  for(var k=0;k<18;k++){
+    add(seeds,'ellipse',{cx:200,cy:200-52,rx:3.5,ry:7,opacity:.8,transform:'rotate('+(k*20+10)+' 200 200)'});
+  }
+})();
+</script>
+</body>
+</html>
